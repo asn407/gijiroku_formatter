@@ -1,0 +1,20 @@
+{
+  "name": "gijiroku-formatter",
+  "version": "1.0.0",
+  "description": "A project to format meeting minutes.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "build": "echo 'Build script not defined'",
+    "test": "echo 'Test script not defined'"
+  },
+  "keywords": [
+    "gijiroku",
+    "formatter",
+    "meeting minutes"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

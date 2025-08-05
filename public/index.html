@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>議事録整形ツール</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>議事録整形ツール</h1>
+        <form id="minutesForm">
+            <label for="inputText">議事録テキスト:</label>
+            <textarea id="inputText" rows="10" required></textarea>
+            <label for="participants">参加者名（カンマ区切り）:</label>
+            <input type="text" id="participants" required>
+            <button type="submit">整形する</button>
+        </form>
+        <h2>整形結果:</h2>
+        <pre id="formattedOutput"></pre>
+    </div>
+    <script src="../src/index.js"></script>
+</body>
+</html>
