@@ -1,5 +1,7 @@
 const formatter = require('./formatter');
 
+const formatter = require('./formatter');
+
 document.addEventListener('DOMContentLoaded', () => {
     const inputTextArea = document.getElementById('inputText');
     const outputTextArea = document.getElementById('outputText');
@@ -7,7 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     formatButton.addEventListener('click', () => {
         const inputText = inputTextArea.value;
-        const participants = ['参加者A', '参加者B']; // 参加者の名前をここに追加
+        // 入力テキストから参加者名を抽出
+        const namePattern = /^(.+?)　.+/gm;
+        const names = new Set();
+        let match;
+        while ((match = namePattern.exec(inputText)) !== null) {
+            names.add(match[1].trim());
+        }
+        const participants = Array.from(names);
         const formattedText = formatter.formatMinutes(inputText, participants);
         outputTextArea.value = formattedText;
     });
